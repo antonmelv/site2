@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  color: #111827;
+}
+
+section {
+  padding: 0 112px;
+}
+
+.wrapper {
+  width: 1440px;
+}
+
+.home-section {
+  background-image: url(./img/Background.png);
+  min-height: 866px;
+  position: relative;
+}
+.home-section .header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+}
+.home-section .header nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.home-section .header nav .link-list {
+  display: flex;
+  gap: 24px;
+}
+.home-section .header nav .link-list .link {
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+}
+.home-section .header .stores {
+  display: flex;
+  gap: 12px;
+}
+.home-section .home-content {
+  margin-top: 72px;
+  display: flex;
+  justify-content: space-between;
+}
+.home-section .home-content .left h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.025em;
+  margin-top: 96px;
+}
+.home-section .home-content .left p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #374151;
+  margin-top: 16px;
+  max-width: 648px;
+}
+.home-section .home-content .left .buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+.home-section .home-content .left .buttons button {
+  width: 138px;
+  height: 56px;
+  border-radius: 8px;
+  border: none;
+  padding: 16px 24px;
+  color: #ffffff;
+  background-color: #7c3aed;
+}
+.home-section .home-content .left .buttons .watch-video {
+  width: 179px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #7c3aed;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+.home-section .fix {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.sponsors-section {
+  height: 142px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sponsors-section .sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  height: 110px;
+  width: 1216px;
+  gap: 64px;
+}
+
+.features-section {
+  min-height: 748px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features-section h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+  margin-top: 96px;
+}
+.features-section p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  max-width: 800px;
+  margin-top: 8px;
+}
+.features-section .features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 64px;
+  margin-top: 64px;
+}
+.features-section .features .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features-section .features .feature h1 {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+}
+.features-section .features .feature p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.stories-section {
+  min-height: 892px;
+  background-color: #d5fafc;
+  padding-top: 120px;
+  padding-left: 216px;
+  display: flex;
+  gap: 32px;
+}
+.stories-section .story-block {
+  background-color: #ffffff;
+  padding: 32px;
+  box-shadow: 0px 4px 8px -2px rgba(17, 24, 39, 0.1), 0px 2px 4px -2px rgba(17, 24, 39, 0.06);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  margin-left: 104px;
+}
+.stories-section .story-block img {
+  height: 32px;
+  width: 112px;
+}
+.stories-section .story-block .story-content {
+  margin-top: 32px;
+  padding-left: 32px;
+  position: relative;
+}
+.stories-section .story-block .story-content i {
+  font-size: 13px;
+  color: #1db5be;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.stories-section .story-block .story-content p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+.stories-section .story-block .story-content h2 {
+  font-weight: 700;
+  line-height: 28px;
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+.stories-section .story-block .story-content span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6b7280;
+  margin-top: 0;
+  position: absolute;
+  bottom: -15px;
+}
+.stories-section .story1 {
+  width: 384px;
+  height: 396px;
+}
+.stories-section .story2 {
+  margin: 0;
+  width: 488px;
+  height: 312px;
+  margin-top: 76px;
+}
+.stories-section .story3 {
+  margin: 0;
+  width: 384px;
+  height: 256px;
+  margin-top: 32px;
+}
+.stories-section .stories-left {
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+.stories-section .stories-left i {
+  color: rgba(29, 181, 190, 0.3);
+  font-size: 142px;
+  position: absolute;
+  top: -56px;
+  left: -104px;
+}
+.stories-section .stories-left h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+  max-width: 488px;
+  position: relative;
+}
+
+.achievements-section {
+  height: 338px;
+  align-items: center;
+  display: flex;
+  gap: 32px;
+}
+.achievements-section .achievements-left {
+  max-width: 592px;
+}
+.achievements-section .achievements-left h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+}
+.achievements-section .achievements-left p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+.achievements-section .achievements-right {
+  max-width: 592px;
+  height: 178px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.achievements-section .achievements-right .achievement {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  row-gap: 40px;
+}
+.achievements-section .achievements-right .achievement div {
+  width: 216px;
+}
+.achievements-section .achievements-right .achievement h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: -0.025em;
+}
+.achievements-section .achievements-right .achievement span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.tools-section {
+  height: 431px;
+  padding-top: 80px;
+}
+.tools-section .line {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  border-top: 1px solid #f3f4f6;
+}
+.tools-section .line .tools-left {
+  max-width: 488px;
+}
+.tools-section .line .tools-left h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+}
+.tools-section .line .tools-left p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.mobile-section {
+  min-height: 558px;
+  background: #1db5be;
+  display: flex;
+  gap: 32px;
+}
+.mobile-section .mobile-left {
+  max-width: 592px;
+  margin-top: 111px;
+}
+.mobile-section .mobile-left h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+}
+.mobile-section .mobile-left p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 8px;
+}
+.mobile-section .mobile-left span {
+  display: block;
+  margin-top: 48px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+.mobile-section .mobile-left .apps {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+}
+.mobile-section .mobile-right {
+  display: flex;
+  position: relative;
+}
+.mobile-section .mobile-right .phone2 {
+  position: absolute;
+  bottom: 0;
+  left: 270px;
+}
+
+footer {
+  min-height: 288px;
+  background: #000000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 112px;
+}
+footer .footer-left {
+  margin-top: 64px;
+}
+footer .footer-left .logomark {
+  padding-bottom: 24px;
+}
+footer .footer-left .footer-links1 {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+footer .footer-left .footer-links2 {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+footer .footer-left a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+footer .footer-left span {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+footer .footer-right {
+  width: 176px;
+  margin-top: 64px;
+}
+footer .footer-right p {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+footer .footer-right div {
+  margin-top: 16px;
+}/*# sourceMappingURL=style.css.map */
