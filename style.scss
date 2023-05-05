@@ -42,18 +42,27 @@ html {
   @include column;
   font-family: "Inter", sans-serif;
   color: $h-font-color;
+  font-size: 100%;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
 }
 
 section {
-  padding: 0 112px;
+  // padding: 0 112px;
+  padding: 0 8%;
 }
 
 .wrapper {
-  width: 1440px;
+  max-width: 1440px;
 }
 
 .home-section {
   background-image: url(./img/Background.png);
+  background-position: center;
+  // background-size: cover;
   min-height: 866px;
   position: relative;
 
@@ -65,7 +74,9 @@ section {
 
     nav {
       @include flex-center;
-      gap: 32px;
+      gap: 2rem;
+      // gap: 32px;
+      // gap: 10%;
 
       .link-list {
         @include flex-gap(24px);
@@ -76,12 +87,17 @@ section {
           cursor: pointer;
           font-size: 14px;
           line-height: 20px;
+          color: $h-font-color;
         }
       }
     }
 
     .stores {
       @include flex-gap(12px);
+
+      .menu {
+        display: none;
+      }
     }
   }
 
@@ -89,9 +105,11 @@ section {
     margin-top: 72px;
     display: flex;
     justify-content: space-between;
+    gap: 40px;
 
     .left {
       h1 {
+        max-width: 648px;
         font-weight: 700;
         font-size: 60px;
         line-height: 72px;
@@ -132,6 +150,13 @@ section {
         }
       }
     }
+
+    .right {
+      img {
+        border-radius: 50px;
+        box-shadow: 0px 24px 48px -12px rgba(17, 24, 39, 0.25);
+      }
+    }
   }
 
   .fix {
@@ -145,7 +170,7 @@ section {
 }
 
 .sponsors-section {
-  height: 142px;
+  min-height: 142px;
   background-color: #ffffff;
   @include flex-center-center;
 
@@ -153,9 +178,12 @@ section {
     @include flex-center-center;
     border-top: 1px solid #e5e7eb;
     border-bottom: 1px solid #e5e7eb;
-    height: 110px;
-    width: 1216px;
+    min-height: 110px;
+    max-width: 1216px;
     gap: 64px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex-wrap: wrap;
   }
 }
 
@@ -166,6 +194,7 @@ section {
   h1 {
     @include h-style70048;
     margin-top: 96px;
+    text-align: center;
   }
 
   p {
@@ -302,9 +331,9 @@ section {
 }
 
 .achievements-section {
-  height: 338px;
+  min-height: 338px;
   align-items: center;
-  @include flex-gap(32px);
+  display: flex;
 
   .achievements-left {
     max-width: 592px;
@@ -319,20 +348,20 @@ section {
   }
 
   .achievements-right {
-    max-width: 592px;
-    height: 178px;
+    max-width: 580px;
+    min-height: 178px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 40px;
 
     .achievement {
       display: flex;
       align-items: center;
       gap: 16px;
-      column-gap: 32px;
-      row-gap: 40px;
 
       div {
-        width: 216px;
+        width: 150px;
       }
 
       h1 {
@@ -354,9 +383,15 @@ section {
 .tools-section {
   height: 431px;
   padding-top: 80px;
+  // max-width: 1216px;
+  // width: 100%;
+  // display: flex;
+  // align-items: flex-start;
+  // justify-content: space-between;
 
   .line {
-    @include flex-gap(32px);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     border-top: 1px solid #f3f4f6;
 
@@ -370,6 +405,12 @@ section {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
+      }
+    }
+
+    .tools-right {
+      img {
+        width: 100%;
       }
     }
   }
@@ -467,6 +508,197 @@ footer {
     }
     div {
       margin-top: 16px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  section {
+    padding: 0 5%;
+  }
+
+  .stories-section {
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 80px;
+    gap: 0px;
+    .stories-left {
+      h1 {
+        max-width: 100%;
+        font-size: 36px;
+      }
+      i {
+        top: -50px;
+        left: -30px;
+      }
+    }
+    .story-block {
+      width: 100%;
+    }
+
+    .story1 {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      margin-top: 24px;
+    }
+    .story2 {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      margin-top: 24px;
+    }
+    .story3 {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .home-section {
+    background-image: url(./img/tabletbackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1240px;
+    .header {
+      nav {
+        .link-list {
+          display: none;
+        }
+      }
+      .stores {
+        .menu {
+          display: block;
+        }
+      }
+    }
+    .home-content {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 80px;
+      margin-top: 80px;
+
+      .left {
+        margin-top: 0px;
+
+        h1 {
+          max-width: 688px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  .features-section {
+    .features {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .stories-section {
+    flex-direction: column;
+  }
+
+  .stories-section {
+    padding-left: 5%;
+    .story-block {
+      width: 100%;
+    }
+
+    .story1 {
+      height: 100%;
+      width: 100%;
+    }
+    .story2 {
+      height: 100%;
+      width: 100%;
+    }
+    .story3 {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .achievements-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    flex-direction: column;
+    min-height: 457px;
+
+    .achievements-left {
+      max-width: 100%;
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .achievements-right {
+      margin-top: 48px;
+    }
+  }
+
+  .tools-section {
+    .line {
+      // .tools-right {
+      //   width: 328px;
+      // }
+    }
+  }
+}
+
+@media (max-width: 515px) {
+  .home-section {
+    .header {
+      .stores {
+        .google {
+          display: none;
+        }
+        .appstore {
+          display: none;
+        }
+      }
+    }
+    .home-content {
+      margin-top: 48px;
+    }
+  }
+
+  .features-section {
+    padding-bottom: 80px;
+    .features {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stories-section {
+    padding-top: 80px;
+    .stories-left {
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .achievements-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    min-height: 560px;
+    align-items: flex-start;
+    .achievements-left {
+      h1 {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+    .achievements-right {
+      grid-template-columns: 1fr;
     }
   }
 }

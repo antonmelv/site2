@@ -11,18 +11,25 @@ html {
   align-items: center;
   font-family: "Inter", sans-serif;
   color: #111827;
+  font-size: 100%;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
 }
 
 section {
-  padding: 0 112px;
+  padding: 0 8%;
 }
 
 .wrapper {
-  width: 1440px;
+  max-width: 1440px;
 }
 
 .home-section {
   background-image: url(./img/Background.png);
+  background-position: center;
   min-height: 866px;
   position: relative;
 }
@@ -36,7 +43,7 @@ section {
 .home-section .header nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 2rem;
 }
 .home-section .header nav .link-list {
   display: flex;
@@ -48,17 +55,23 @@ section {
   cursor: pointer;
   font-size: 14px;
   line-height: 20px;
+  color: #111827;
 }
 .home-section .header .stores {
   display: flex;
   gap: 12px;
 }
+.home-section .header .stores .menu {
+  display: none;
+}
 .home-section .home-content {
   margin-top: 72px;
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 }
 .home-section .home-content .left h1 {
+  max-width: 648px;
   font-weight: 700;
   font-size: 60px;
   line-height: 72px;
@@ -99,6 +112,10 @@ section {
   font-size: 16px;
   line-height: 24px;
 }
+.home-section .home-content .right img {
+  border-radius: 50px;
+  box-shadow: 0px 24px 48px -12px rgba(17, 24, 39, 0.25);
+}
 .home-section .fix {
   position: absolute;
   bottom: 0;
@@ -109,7 +126,7 @@ section {
 }
 
 .sponsors-section {
-  height: 142px;
+  min-height: 142px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -121,9 +138,12 @@ section {
   justify-content: center;
   border-top: 1px solid #e5e7eb;
   border-bottom: 1px solid #e5e7eb;
-  height: 110px;
-  width: 1216px;
+  min-height: 110px;
+  max-width: 1216px;
   gap: 64px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  flex-wrap: wrap;
 }
 
 .features-section {
@@ -138,6 +158,7 @@ section {
   line-height: 60px;
   letter-spacing: -0.025em;
   margin-top: 96px;
+  text-align: center;
 }
 .features-section p {
   font-weight: 400;
@@ -267,10 +288,9 @@ section {
 }
 
 .achievements-section {
-  height: 338px;
+  min-height: 338px;
   align-items: center;
   display: flex;
-  gap: 32px;
 }
 .achievements-section .achievements-left {
   max-width: 592px;
@@ -287,21 +307,21 @@ section {
   line-height: 28px;
 }
 .achievements-section .achievements-right {
-  max-width: 592px;
-  height: 178px;
+  max-width: 580px;
+  min-height: 178px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  row-gap: 40px;
 }
 .achievements-section .achievements-right .achievement {
   display: flex;
   align-items: center;
   gap: 16px;
-  -moz-column-gap: 32px;
-       column-gap: 32px;
-  row-gap: 40px;
 }
 .achievements-section .achievements-right .achievement div {
-  width: 216px;
+  width: 150px;
 }
 .achievements-section .achievements-right .achievement h1 {
   font-weight: 700;
@@ -321,7 +341,7 @@ section {
 }
 .tools-section .line {
   display: flex;
-  gap: 32px;
+  justify-content: space-between;
   align-items: center;
   border-top: 1px solid #f3f4f6;
 }
@@ -338,6 +358,9 @@ section {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
+}
+.tools-section .line .tools-right img {
+  width: 100%;
 }
 
 .mobile-section {
@@ -432,4 +455,152 @@ footer .footer-right p {
 }
 footer .footer-right div {
   margin-top: 16px;
+}
+
+@media (max-width: 1400px) {
+  section {
+    padding: 0 5%;
+  }
+  .stories-section {
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 80px;
+    gap: 0px;
+  }
+  .stories-section .stories-left h1 {
+    max-width: 100%;
+    font-size: 36px;
+  }
+  .stories-section .stories-left i {
+    top: -50px;
+    left: -30px;
+  }
+  .stories-section .story-block {
+    width: 100%;
+  }
+  .stories-section .story1 {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 24px;
+  }
+  .stories-section .story2 {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 24px;
+  }
+  .stories-section .story3 {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 850px) {
+  .home-section {
+    background-image: url(./img/tabletbackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1240px;
+  }
+  .home-section .header nav .link-list {
+    display: none;
+  }
+  .home-section .header .stores .menu {
+    display: block;
+  }
+  .home-section .home-content {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+    margin-top: 80px;
+  }
+  .home-section .home-content .left {
+    margin-top: 0px;
+  }
+  .home-section .home-content .left h1 {
+    max-width: 688px;
+    margin-top: 0px;
+  }
+  .features-section .features {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stories-section {
+    flex-direction: column;
+  }
+  .stories-section {
+    padding-left: 5%;
+  }
+  .stories-section .story-block {
+    width: 100%;
+  }
+  .stories-section .story1 {
+    height: 100%;
+    width: 100%;
+  }
+  .stories-section .story2 {
+    height: 100%;
+    width: 100%;
+  }
+  .stories-section .story3 {
+    height: 100%;
+    width: 100%;
+  }
+  .achievements-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    flex-direction: column;
+    min-height: 457px;
+  }
+  .achievements-section .achievements-left {
+    max-width: 100%;
+  }
+  .achievements-section .achievements-left h1 {
+    font-size: 36px;
+  }
+  .achievements-section .achievements-left p {
+    font-size: 18px;
+  }
+  .achievements-section .achievements-right {
+    margin-top: 48px;
+  }
+}
+@media (max-width: 515px) {
+  .home-section .header .stores .google {
+    display: none;
+  }
+  .home-section .header .stores .appstore {
+    display: none;
+  }
+  .home-section .home-content {
+    margin-top: 48px;
+  }
+  .features-section {
+    padding-bottom: 80px;
+  }
+  .features-section .features {
+    grid-template-columns: 1fr;
+  }
+  .stories-section {
+    padding-top: 80px;
+  }
+  .stories-section .stories-left h1 {
+    font-size: 30px;
+  }
+  .achievements-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    min-height: 560px;
+    align-items: flex-start;
+  }
+  .achievements-section .achievements-left h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .achievements-section .achievements-right {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
